@@ -82,6 +82,10 @@ main {
     color: white;
     border: 1px solid #cc0000;
   }
+
+  .mensagem.erro ul {
+    list-style: none;
+  }
   
   .mensagem.sucesso {
     background-color: #44ff44;

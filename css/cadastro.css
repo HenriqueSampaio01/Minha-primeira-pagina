@@ -92,6 +92,10 @@ main {
   text-align: center;
 }
 
+.mensagem.erro ul {
+  list-style: none;
+}
+
 .mensagem.sucesso {
   background-color: #44ff44;
   color: black;

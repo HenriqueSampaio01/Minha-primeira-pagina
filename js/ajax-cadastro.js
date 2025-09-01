@@ -18,10 +18,10 @@ document.getElementById('formCadastro').addEventListener('submit', function(e) {
         mensagemDiv.innerHTML = data.mensagem + '<br><a href="login.html" class="btn-login">Ir para Login</a>';
         mensagemDiv.className = 'mensagem sucesso';
         
-        // Limpar formulário após sucesso
+       
         document.getElementById('formCadastro').reset();
         
-        // NÃO redirecionar automaticamente - deixar o usuário escolher
+        
       } else {
         let errosHtml = '<ul>';
         data.erros.forEach(erro => {
