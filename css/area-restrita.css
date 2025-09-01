@@ -1,0 +1,32 @@
+.menu-area-restrita {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .menu-area-restrita h2 {
+    font-size: 1.87rem;
+    margin-bottom: 1.25rem;
+    color: #e49b0f;
+  }
+  
+  .menu-opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .menu-opcoes .btn {
+    background-color: #e49b0f;
+    padding: 14px 28px;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 0 4px 8px #000;
+  }
+  
+  .menu-opcoes .btn:hover {
+    background-color: #cc860e;
+  } 
