@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
       mensagemDiv.innerHTML = '';
       mensagemDiv.className = 'mensagem';
       
-      fetch('login.php', {
+      fetch('/php/login.php', {
         method: 'POST',
         body: formData
       })

@@ -8,7 +8,7 @@ document.getElementById('formCadastro').addEventListener('submit', function(e) {
     mensagemDiv.innerHTML = '';
     mensagemDiv.className = 'mensagem';
     
-    fetch('cadastro.php', {
+    fetch('/php/cadastro.php', {
       method: 'POST',
       body: formData
     })
