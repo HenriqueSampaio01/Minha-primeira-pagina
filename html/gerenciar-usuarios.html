@@ -7,18 +7,72 @@
   <link rel="stylesheet" href="/css/gerenciar-usuarios.css">
 </head>
 <body>
-  <h1>Usuários cadastrados no sistema</h1>
-  <a href="area-restrita.html" class="voltar">← Voltar para Area Restrita</a>
-  <table>
-    <thead>
-      <tr><th>Nome</th><th>Email</th><th>Telefone</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Pedro Lima</td><td>pedro@gmail.com</td><td>(17) 99564-1293</td></tr>
-      <tr><td>Juliana Rocha</td><td>juliana@gmail.com</td><td>(11) 98721-9129</td></tr>
-      <tr><td>Henrique</td><td>henrique@gmail.com</td><td>(17) 99123-1987</td></tr>
-      <tr><td>Vitoria</td><td>vitoria@gmail.com</td><td>(11) 97213-6259</td</tr>
-    </tbody>
-  </table>
+  <div class="container">
+    <h1>Gerenciar Usuários</h1>
+    <a href="area-restrita.html" class="voltar">← Voltar para Area Restrita</a>
+    
+    
+    <button id="btnNovoUsuario" class="btn-novo">+ Novo Usuário</button>
+    
+    <!-- Formulário para adicionar/editar usuário -->
+    <div id="formUsuario" class="form-container" style="display: none;">
+      <h2 id="formTitulo">Adicionar Usuário</h2>
+      <form id="usuarioForm">
+        <input type="hidden" id="usuarioId" name="id">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="text" id="telefone" name="telefone" required>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="password" id="senha" name="senha">
+          <small id="senhaHelp">Deixe em branco para manter a senha atual (ao editar)</small>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-salvar">Salvar</button>
+          <button type="button" class="btn-cancelar" onclick="cancelarForm()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Tabela de usuários -->
+    <div class="table-container">
+      <table id="tabelaUsuarios">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="usuariosBody">
+          <!-- Usuários serão carregados aqui via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Modal de confirmação para exclusão -->
+  <div id="modalConfirmacao" class="modal" style="display: none;">
+    <div class="modal-content">
+      <h3>Confirmar Exclusão</h3>
+      <p>Tem certeza que deseja excluir o usuário <strong id="nomeUsuarioExcluir"></strong>?</p>
+      <div class="modal-actions">
+        <button id="btnConfirmarExclusao" class="btn-excluir">Sim, Excluir</button>
+        <button onclick="fecharModal()" class="btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/gerenciar-usuarios.js"></script>
 </body>
 </html>
