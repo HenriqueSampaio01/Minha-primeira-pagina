@@ -69,7 +69,7 @@ h2 {
 }
 
 .btn-enviar:hover {
-    background: #0056b3;
+    filter: brightness(0.8);
 }
 
 .btn-enviar:disabled {

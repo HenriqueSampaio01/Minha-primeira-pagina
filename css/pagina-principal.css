@@ -16,7 +16,7 @@
 
 .introducao:hover {
   transform: scale(1.05);
-  transition: 0.5s;
+  transition: transform 1s ease;
 }
 
 .introducao h2 {
@@ -33,7 +33,7 @@
 
 .novidades:hover {
   transform:scale(1.05);
-  transition: 0.5s;
+  transition: transform 1s ease;
 }
 
 .novidades h2 {
@@ -62,7 +62,7 @@
 
 .certificacoes:hover {
   transform: scale(1.05);
-  transition: 0.5s;
+  transition: transform 1s ease;
 }
 
 .certificados {
