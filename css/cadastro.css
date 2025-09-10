@@ -15,7 +15,8 @@ main {
 }
 
 .form-cadastro:hover {
-  border: 1px solid #cca152;
+  border: 1.5px solid #cca152;
+  transition: 2s linear;
 }
 
 .form-cadastro h2 {
@@ -58,7 +59,7 @@ main {
 }
 
 .form-cadastro input[type="submit"]:hover {
-  background-color: #c4811e;
+  filter: brightness(1.2)
 }
 
 .erro {
@@ -118,6 +119,6 @@ main {
 }
 
 .btn-login:hover {
-  background-color: #c4811e;
+  filter: brightness(1.2);
   transform: translateY(-2px);
 }
